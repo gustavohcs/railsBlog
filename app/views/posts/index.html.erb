@@ -4,6 +4,8 @@
 
     <% @posts.each do |post| %>
         <%= link_to post.title, post %>
+        <p align="right">Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+        <hr>
     <% end %>
 
 
